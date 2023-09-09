@@ -1,11 +1,14 @@
 import Logo from '../../images/Logo.svg'
+import { LogoDark } from '../Footer/LogoDark'
 import styles from './Header.module.scss'
 
 export const Header = () => {
     return (
         <header className={styles.header}>
             <nav>
-                <a href="#home"><img src={Logo} alt="Logo"/></a>
+                <a href="#home">
+                    <LogoDark />
+                </a>
                 <ul className={styles.menu}>
                     <li className={styles.menuButton}>
                         <a className={styles.menuAnchor} href="#home">Home</a>
