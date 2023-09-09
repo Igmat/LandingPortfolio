@@ -1,7 +1,7 @@
 export const Hero = () => {
     return (
-        <div>
+        <section>
 
-        </div>
+        </section>
     )
 }
