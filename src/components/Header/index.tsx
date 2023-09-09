@@ -1,4 +1,3 @@
-import Logo from '../../images/Logo.svg'
 import { LogoDark } from '../Footer/LogoDark'
 import styles from './Header.module.scss'
 
