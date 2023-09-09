@@ -1,0 +1,31 @@
+.footer {
+    background-color: #2B384C;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 18%;
+}
+
+.menu {
+    display: flex;
+}
+
+.menuButton {
+    padding: 12px;
+}
+
+.copyRight {
+    color:  #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.menuLink {
+    color: #F0F1F3;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; 
+}
