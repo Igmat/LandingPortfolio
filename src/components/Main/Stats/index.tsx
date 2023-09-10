@@ -1,6 +1,8 @@
+import styles from './Stats.module.scss';
+
 export const Stats = () => {
     return (
-        <section>
+        <section className={styles.statsWrapper}>
             
         </section>
     )

@@ -1,4 +1,5 @@
 body {
+  background: #F0F1F3;
   margin: 0;
   font-family: Work Sans;
   -webkit-font-smoothing: antialiased;
@@ -34,6 +35,6 @@ input {
   outline: none;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
