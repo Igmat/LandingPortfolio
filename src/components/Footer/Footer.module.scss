@@ -27,5 +27,9 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 30px; 
+    line-height: 30px;
+
+    &:hover {
+        color: #C930FF;
+    }
 }

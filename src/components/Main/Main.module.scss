@@ -1,35 +1,3 @@
 .mainSection {
-    position: relative;
-    overflow: hidden;
-
-    &::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background-color: #fff;
-        width: 757px;
-        height: 316.592px;
-        transform: rotate(-30deg);
-        z-index: -1;
-        border-radius: 757.86px;
-        background: linear-gradient(182deg, rgba(8, 249, 203, 0.60) -157.4%, rgba(0, 255, 208, 0.00) 216.94%);;
-        filter: blur(100px);
-    }
-
-    &::after {
-        content: "";
-        position: absolute;
-        top: -300px;
-        right: -200px;
-        background-color: #fff;
-        width: 498px;
-        height: 871px;
-        transform: rotate(-130deg);
-        z-index: -1;
-        border-radius: 871px;
-        background: rgba(218, 77, 241, 0.40);
-        filter: blur(300px);
-    }
-
+    background-color: #fff;
 }
