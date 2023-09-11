@@ -10,6 +10,9 @@ export const Case = () => {
                 <p>Exploring the fusion of streaming and auctions, this project showcases a unique platform for content creators to connect with their audience. At its core, a custom crypto token empowers users to bid on exclusive content and engage with their favorite creators.</p>
                 <Button>View Case Study</Button>
             </div>
+            <div>
+                <img className={styles.caseImage} src={background} alt="case image"/>
+            </div>
         </section>
     )
 }
