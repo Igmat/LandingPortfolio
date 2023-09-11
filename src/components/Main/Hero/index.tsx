@@ -24,6 +24,7 @@ export const Hero = () => {
             </div>
             <div className={styles.greenEllipse}></div>
             <div className={styles.purpleRectangle}></div>
+            <div className={styles.blueCircle}></div>
         </section>
     )
 }

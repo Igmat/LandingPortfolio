@@ -8,7 +8,7 @@ export const Stats = () => {
                 <span className={styles.thinText}>Experience</span>
             </div> 
             <div className={styles.stats}>
-                <span className={styles.boldText}>50 +</span>
+                <span className={styles.boldText}>50+</span>
                 <span className={styles.thinText}>Projects Completed</span>
             </div>
             <div className={styles.stats}>

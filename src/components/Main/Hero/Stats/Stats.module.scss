@@ -4,7 +4,9 @@
     gap: 4px;
 
     & .stats {
-        max-width: 200px;
+        width: 200px;
+        border-radius: 6px 0px 0px 6px;
+        border: 1px solid #FFF;
         background: rgba(255, 255, 255, 0.70);
         padding: 20px;
         display: flex;
