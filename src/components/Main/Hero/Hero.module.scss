@@ -2,13 +2,14 @@
     background-color: #FFF;
     position: relative;
     overflow: hidden;
+    padding-top: 46px;
 
     & .background {
-        margin: 0 auto;
+        /*margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
+        flex-wrap: wrap;*/
         padding-top: 46px;
         padding-bottom: 425px;
     }
@@ -16,13 +17,16 @@
     & .heroInfoWrapper {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        width: 1220px;
+        margin: 0 auto;
     }
 
     & .articleWrapper {
         padding-top: 82px;
         padding-bottom: 74px;
-        padding-right: 295px;
+        /*padding-right: 295px;*/
+        width: 912px;
+        position: relative;
         background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
         z-index: 80;
     }
@@ -42,13 +46,15 @@
 
     & .heroImageWrapper {
         box-sizing: content-box;
-        width: 400px;
+        /*width: 400px;
         height: 400px;
         display: flex;
         align-items: center;
         justify-content: center;
-        transform: translate(100%, 0);
+        transform: translate(100%, 0);*/
         position: absolute;
+        top: 35px;
+        right: -30%;
         z-index: 150;
         padding: 25px;
 
@@ -57,27 +63,28 @@
             height: 100%;
             border-radius: 50%;
             z-index: 200;
-
         }
 
         &::before {
             content: "";
             position: absolute;
-            width: 24px;
+            top: -35px;
+            left: 175px;
+            width: 30px;
             height: 722px;
-            transform: translate(-58px, 74px);
             background: rgba(0, 244, 214, 0.30);
-            z-index: 80;
+            z-index: -1;
         }
 
         &::after {
             content: "";
             position: absolute;
-            transform: translate(20px, -20px);
+            top: -127px;
+            right: 108px;
             width: 137px;
             height: 627px;
             background: #FFC6FF;
-            z-index: 80;
+            z-index: -1;
         }
     }
 

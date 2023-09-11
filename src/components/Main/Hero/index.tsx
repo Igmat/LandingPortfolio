@@ -13,14 +13,15 @@ export const Hero = () => {
                         <h1>Journey Through <br /> UX/UI Artistry</h1>
                         <p>Crafting Captivating User-Centric and Pixel-Perfect Designs</p>
                         <Button>Say Hello!</Button>
+                        <div className={styles.heroImageWrapper}>
+                            <img src={hero} alt="hero" />
+                            <StrokeForImage />
+                        </div>
                     </article>
                     <Stats />
                 </div>
 
-                <div className={styles.heroImageWrapper}>
-                    <img src={hero} alt="hero" />
-                    <StrokeForImage />
-                </div>
+                
             </div>
             <div className={styles.greenEllipse}></div>
             <div className={styles.purpleRectangle}></div>
