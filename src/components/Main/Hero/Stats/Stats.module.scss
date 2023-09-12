@@ -16,12 +16,26 @@
         gap: 8px;
         z-index: 90;
     }
+
+    & .boldText {
+        color: #424E60;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 40px;
+    }
+
+    & .thinText {
+        color: #556070;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+    }
 }
 
-.boldText {
-    color: #424E60;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 40px;
+@media (max-width: 1200px ) {
+    & .statsWrapper {
+        display: none;
+    }
 }

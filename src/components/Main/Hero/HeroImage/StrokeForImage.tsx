@@ -1,9 +1,7 @@
-import styles from './StrokeForImage.module.scss'
 
 export const StrokeForImage = () => {
   return (
-      <svg
-          className={styles.strokeForImage}
+    <svg
       xmlns="http://www.w3.org/2000/svg"
       width={451}
       height={451}

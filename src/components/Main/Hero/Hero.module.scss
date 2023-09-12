@@ -5,11 +5,6 @@
     padding-top: 46px;
 
     & .background {
-        /*margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;*/
         padding-top: 46px;
         padding-bottom: 425px;
     }
@@ -17,18 +12,20 @@
     & .heroInfoWrapper {
         display: flex;
         flex-direction: column;
-        width: 1220px;
+        max-width: 1220px;
         margin: 0 auto;
     }
 
     & .articleWrapper {
-        padding-top: 82px;
-        padding-bottom: 74px;
-        /*padding-right: 295px;*/
-        width: 912px;
-        position: relative;
-        background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+        padding: 82px 20px 0;
         z-index: 80;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        & .textWrapper {
+            width: auto;
+            background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+        }
     }
 
     & h1 {
@@ -42,50 +39,6 @@
     & p {
         color: #556070;
         margin-bottom: 32px;
-    }
-
-    & .heroImageWrapper {
-        box-sizing: content-box;
-        /*width: 400px;
-        height: 400px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: translate(100%, 0);*/
-        position: absolute;
-        top: 35px;
-        right: -30%;
-        z-index: 150;
-        padding: 25px;
-
-        & img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            z-index: 200;
-        }
-
-        &::before {
-            content: "";
-            position: absolute;
-            top: -35px;
-            left: 175px;
-            width: 30px;
-            height: 722px;
-            background: rgba(0, 244, 214, 0.30);
-            z-index: -1;
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            top: -127px;
-            right: 108px;
-            width: 137px;
-            height: 627px;
-            background: #FFC6FF;
-            z-index: -1;
-        }
     }
 
     & .greenEllipse {
@@ -125,5 +78,23 @@
         border-radius: 1044.316px;
         background: rgba(196, 236, 245, 0.70);
         filter: blur(300px);
+    }
+}
+
+@media (max-width: 1200px) {
+    .heroSection {
+        & .articleWrapper {
+            padding: 40px 28px;
+            z-index: 80;
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            & .textWrapper {
+                display: flex;
+                flex-direction: column;
+                background: none;
+            }
+        }
     }
 }
