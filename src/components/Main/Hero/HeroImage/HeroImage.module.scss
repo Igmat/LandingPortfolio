@@ -5,6 +5,7 @@
     z-index: 150;
     padding: 25px;
     position: relative;
+    transform: translateY(-45px);
 
     & img {
         width: 100%;
@@ -42,5 +43,49 @@
         height: 627px;
         background: #FFC6FF;
         z-index: -1;
+    }
+}
+
+@media (max-width: 1200px) {
+    .heroImageWrapper {
+        max-width: 282px;
+        padding: 0;
+        margin: 0 auto;
+        & img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        & svg {
+            position: absolute;
+            position: absolute;
+            top: -19px;
+            left: -19px;
+            width: 319px;
+            height: 319px;
+            z-index: 100;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: -94px;
+            left: 175px;
+            width: 24px;
+            height: 577.414px;
+            background: rgba(0, 244, 214, 0.3);
+            z-index: -1;
+            transform: rotate(33deg);
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: -127px;
+            right: 108px;
+            width: 136px;
+            height: 613.223px;
+            background: #FFC6FF;
+            z-index: -1;
+            transform: rotate(33deg);
+        }
     }
 }
