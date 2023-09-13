@@ -5,12 +5,11 @@
     box-shadow: 0px 36px 105px 0px rgba(43, 56, 76, 0.1);
     display: flex;
     gap: 64px;
-    /* position: absolute; */
     right: 50%;
-    transform: translate(0, -70%);
-    z-index: 50;
     margin: 0 auto;
     max-width: 1017px;
+    transform: translate(50%, -70%);
+    z-index: 5;
 }
 
 .aboutWrapper {

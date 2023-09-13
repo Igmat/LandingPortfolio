@@ -1,91 +1,38 @@
 .heroImageWrapper {
-    box-sizing: content-box;
-    max-width: 400px;
-    height: auto;
-    z-index: 150;
-    padding: 25px;
-    position: relative;
-    transform: translateY(-45px);
-
-    & img {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        z-index: 200;
-    }
-
-    & svg {
+        box-sizing: content-box;
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 448px;
-        height: 448px;
-        z-index: 100;
-    }
+        top: 35px;
+        right: 0;
+        z-index: 10;
+        padding: 25px;
+        margin-right: 17px;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: -35px;
-        left: 175px;
-        width: 30px;
-        height: 722px;
-        background: rgba(0, 244, 214, 0.30);
-        z-index: -1;
-    }
-
-    &::after {
-        content: "";
-        position: absolute;
-        top: -127px;
-        right: 108px;
-        width: 137px;
-        height: 627px;
-        background: #FFC6FF;
-        z-index: -1;
-    }
-}
-
-@media (max-width: 1200px) {
-    .heroImageWrapper {
-        max-width: 282px;
-        padding: 0;
-        margin: 0 auto;
         & img {
             width: 100%;
             height: 100%;
             border-radius: 50%;
+            z-index: 50;
         }
-        & svg {
-            position: absolute;
-            position: absolute;
-            top: -19px;
-            left: -19px;
-            width: 319px;
-            height: 319px;
-            z-index: 100;
-        }
+
         &::before {
             content: "";
             position: absolute;
-            top: -94px;
+            top: -35px;
             left: 175px;
-            width: 24px;
-            height: 577.414px;
-            background: rgba(0, 244, 214, 0.3);
+            width: 30px;
+            height: 722px;
+            background: rgba(0, 244, 214, 0.30);
             z-index: -1;
-            transform: rotate(33deg);
         }
+
         &::after {
             content: "";
             position: absolute;
             top: -127px;
             right: 108px;
-            width: 136px;
-            height: 613.223px;
+            width: 137px;
+            height: 627px;
             background: #FFC6FF;
             z-index: -1;
-            transform: rotate(33deg);
         }
     }
-}
