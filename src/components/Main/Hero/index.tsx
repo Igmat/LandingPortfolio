@@ -1,7 +1,6 @@
 import { Button } from '../../Button';
 import { Stats } from './Stats';
-import { StrokeForImage } from '../StrokeForImage';
-import hero from '../../../images/hero_image.png'
+import { HeroImage } from './HeroImage';
 import styles from './Hero.module.scss';
 
 export const Hero = () => {
@@ -13,11 +12,8 @@ export const Hero = () => {
                         <h1>Journey Through <br /> UX/UI Artistry</h1>
                         <p>Crafting Captivating User-Centric and Pixel-Perfect Designs</p>
                         <Button>Say Hello!</Button>
-                        <div className={styles.heroImageWrapper}>
-                            <img src={hero} alt="hero" />
-                            <StrokeForImage />
-                        </div>
                     </article>
+                    <HeroImage />
                     <Stats />
                 </div>
 
