@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
-import markdown from '../../markdown/readme1.md'
 
 declare const require: {
     context(
@@ -20,10 +19,8 @@ const importAll = (r: any) => r.keys().map(r);
 const markdownFiles = importAll(context);
 
 console.log(context.keys());
-
 console.log(markdownFiles)
 console.log(markdownFiles.map((file: any) => file.default));
-console.log(markdown);
 
 
 export const NewCase = (): any => {
