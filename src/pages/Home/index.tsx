@@ -5,7 +5,7 @@ import { NewCase } from "./NewCase"
 import styles from './Main.module.scss'
 
 
-export const Main = () => {
+export const Home = () => {
     return (
         <main className={styles.mainSection}>
             <Hero />

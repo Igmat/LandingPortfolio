@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Button } from '../../Button';
+import { Button } from '../../../components/Button';
 import ReactMarkdown from 'react-markdown';
 import styles from './NewCase.module.scss';
 

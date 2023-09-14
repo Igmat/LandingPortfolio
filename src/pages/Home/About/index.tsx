@@ -3,7 +3,7 @@ import { DribbleIcon } from './Social/DribbleIcon'
 import { InstagramIcon } from './Social/InstagramIcon'
 import { LinkedInIcon } from './Social/LinkedInIcon'
 import { BehanceIcon } from './Social/BehanceIcon'
-import { Button } from '../../Button'
+import { Button } from '../../../components/Button'
 import { ArrowDownload } from './ArrowDownload'
 import styles from './About.module.scss'
 

@@ -1,4 +1,4 @@
-import { Button } from '../../Button';
+import { Button } from '../../../components/Button';
 import { Stats } from './Stats';
 import { HeroImage } from './HeroImage';
 import styles from './Hero.module.scss';
