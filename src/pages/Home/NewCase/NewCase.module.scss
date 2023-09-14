@@ -45,3 +45,34 @@
     }
     
 }
+
+.button {
+    padding: 12px 24px;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid  #C930FF;
+    color:  #C930FF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    grid-area: button;
+    z-index: 999;
+
+    &:hover {
+        background-color: #C930FF;
+        border-radius: 4px;
+        cursor: pointer;
+        color: #fff;
+
+        & svg {
+            & path {
+                fill: #fff;
+            }
+        }
+    }
+}
