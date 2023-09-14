@@ -6,9 +6,9 @@ export const Header = () => {
     return (
         <header className={styles.header}>
             <nav>
-                <a href="#home">
+                <Link to="home">
                     <LogoDark />
-                </a>
+                </Link>
                 <ul className={styles.menu}>
                     <li className={styles.menuButton}>
                         <Link to="home" className={styles.menuAnchor}>Home</Link>
