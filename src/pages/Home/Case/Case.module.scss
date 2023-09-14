@@ -38,3 +38,15 @@
         }
     }    
 }
+
+@media (max-width: 1200px) {
+    .sectionWrapper {
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .sectionWrapper {
+        border-radius: 0;
+    }
+}

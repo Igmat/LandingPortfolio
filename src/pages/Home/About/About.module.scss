@@ -74,3 +74,26 @@
         z-index: 20;
     }
 }
+
+@media (max-width: 768px) {
+    .sectionWrapper {
+        transform: none;
+        padding: 60px 28px 40px;
+        flex-direction: column;
+        margin-bottom: 0;
+    
+
+    & .social {
+            flex-direction: row;
+        }
+    }
+
+    .aboutWrapper {
+        
+
+        & .aboutText {
+            line-height: 20px;
+            font-size: 14px;
+        }
+    }
+}

@@ -83,6 +83,11 @@
 
 @media (max-width: 1200px) {
     .heroSection {
+
+        & .background {
+                padding-bottom: 280px;
+            }
+
         & .articleWrapper {
             padding: 40px 28px;
             z-index: 8;
@@ -97,11 +102,40 @@
                 display: flex;
                 flex-direction: column;
                 background: none;
-            }
+            }            
         }
 
         & .heroInfoWrapper {
             align-items: center;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        padding-top: 0;
+
+        & .articleWrapper {
+            padding: 40px 0;
+        }
+
+        & .heroInfoWrapper {
+            padding: 0 28px;
+        }
+
+        & .background {
+            padding: 0;
+        }
+
+        & h1 {
+            font-size: 38px;
+            font-weight: 600;
+            line-height: 50px;
+        }
+
+        & p {
+            font-size: 18px;
+            line-height: 30px;
         }
     }
 }
