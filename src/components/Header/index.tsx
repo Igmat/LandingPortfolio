@@ -20,7 +20,7 @@ export const Header = () => {
                         <Link to="cases" className={styles.menuAnchor}>Work</Link>
                     </li>
                     <li className={styles.menuButton}>
-                        <a className={styles.menuAnchor}  href="#contact">Contact</a>
+                        <a className={styles.menuAnchor}>Contact</a>
                     </li>
                 </ul>
             </nav>
