@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '../../../components/Button';
 import ReactMarkdown from 'react-markdown';
 import styles from './NewCase.module.scss';
+import { Link } from 'react-router-dom';
 
 declare const require: {
     context(
@@ -44,7 +45,7 @@ export const NewCase = (): any => {
                 <section key={i} className={styles.sectionWrapper}>
                     <div className={styles.sectionTextWrapper}>
                         <ReactMarkdown children={post} />
-                        <Button>View Case Study</Button>
+                        <Link to={`${context.keys()[i].slice(1).slice(0, -8)}`}>View Case Study</Link>
                     </div>
                     <div>
                         <img className={styles.caseImage} src={`./markdown/cases-home${context.keys()[i].slice(1).slice(0, -8)}/cover-bg.png`} alt="case background" />

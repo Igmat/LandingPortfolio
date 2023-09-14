@@ -6,6 +6,7 @@ import App from './App';
 import { Cases } from './pages/Cases';
 import { Home } from './pages/Home';
 import './index.scss';
+import { createPath, pathState } from './utils/createPath';
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,8 @@ const router = createBrowserRouter([
     children: [
       { path: '/', element: <Home /> },
       { path: '/home', element: <Home /> },
-      { path: '/cases', element: < Cases /> },
+      { path: '/cases', element: <Cases /> },
+      ...createPath(pathState)
     ]
   }
 ])
