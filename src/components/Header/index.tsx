@@ -6,7 +6,7 @@ export const Header = () => {
     return (
         <header className={styles.header}>
             <nav>
-                <Link to="home">
+                <Link to="home" className={styles.menuLogo}>
                     <LogoDark />
                 </Link>
                 <ul className={styles.menu}>
