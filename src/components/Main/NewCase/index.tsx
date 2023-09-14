@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
+import { Button } from '../../Button';
 import ReactMarkdown from 'react-markdown';
+import styles from './NewCase.module.scss';
 
 declare const require: {
     context(
@@ -12,16 +14,7 @@ declare const require: {
     };
 };
 
-const context = require.context('../../markdown', false, /\.md$/);
-
-const importAll = (r: any) => r.keys().map(r);
-
-const markdownFiles = importAll(context);
-
-console.log(context.keys());
-console.log(markdownFiles)
-console.log(markdownFiles.map((file: any) => file.default));
-
+const context = require.context('../../../../public/markdown/cases-home', true, /\.md$/);
 
 export const NewCase = (): any => {
     const [posts, setPosts] = useState<string[]>([]);
@@ -30,8 +23,8 @@ export const NewCase = (): any => {
         async function fetchCases() {
             try {
                 const postTexts = await Promise.all(
-                    markdownFiles.map(async (file: any) => {
-                        const res = await fetch(file);
+                    context.keys().map(async (file: any) => {
+                        const res = await fetch(`./markdown/cases-home/${file}`);
                         const text = await res.text();
                         return text;
                     })
@@ -45,14 +38,22 @@ export const NewCase = (): any => {
         fetchCases();
     }, []);
 
-    return (
-        <section>
-            {posts.map((post: string, i: number) =>
-                <div key={i}>
-                    <ReactMarkdown children={post} />
-                </div>
-            )}
-        </section>
-    );
+    return (<>
+        {
+            posts.map((post: string, i) => (
+                <section key={i} className={styles.sectionWrapper}>
+                    <div className={styles.sectionTextWrapper}>
+                        <ReactMarkdown children={post} />
+                        <Button>View Case Study</Button>
+                    </div>
+                    <div>
+                        <img className={styles.caseImage} src={`./markdown/cases-home${context.keys()[i].slice(1).slice(0, -8)}/cover-bg.png`} alt="case background" />
+                    </div>
+                </section>
+            )
+            )
+        }
+    </>)
+
 }
 

@@ -85,16 +85,23 @@
     .heroSection {
         & .articleWrapper {
             padding: 40px 28px;
-            z-index: 80;
+            z-index: 8;
             display: flex;
             flex-direction: column;
+            background: none;
+            align-items:normal;
+            /*max-width: fit-content;*/
+            z-index: 15;
 
-            align-items: center;
             & .textWrapper {
                 display: flex;
                 flex-direction: column;
                 background: none;
             }
+        }
+
+        & .heroInfoWrapper {
+            align-items: center;
         }
     }
 }

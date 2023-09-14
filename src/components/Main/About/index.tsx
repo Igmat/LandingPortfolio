@@ -9,7 +9,7 @@ import styles from './About.module.scss'
 
 export const About = () => {
     return (
-        <section id='#about' className={styles.sectionWrapper}>
+        <section id='about' className={styles.sectionWrapper}>
             <article className={styles.aboutWrapper}>
                 <h2 className={styles.aboutTitle}>Passionate UX/UI Designer Creating Seamless Digital Experiences</h2>
                 <p className={styles.aboutText}>

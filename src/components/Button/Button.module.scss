@@ -12,6 +12,8 @@
     align-items: center;
     justify-content: center;
     gap: 12px;
+    grid-area: button;
+    z-index: 999;
 
     &:hover {
         background-color: #C930FF;

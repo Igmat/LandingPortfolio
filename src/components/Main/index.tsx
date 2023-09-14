@@ -15,5 +15,3 @@ export const Main = () => {
         </main>
     )
 }
-
-
