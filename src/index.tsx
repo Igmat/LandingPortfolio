@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
-import { NewCasePage } from './pages/NewCasePage';
+import { NewCasePage } from './pages/CasePage';
 import { Home } from './pages/Home';
 import './index.scss';
 
