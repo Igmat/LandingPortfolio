@@ -20,6 +20,4 @@ export const Casecard = (props: CaseCardProps) => {
                 <img className={styles.caseImage} src={`/markdown/cases/${props.name}/cover-bg.png`} alt="case background" />
             </div>
         </section>)
-
-
 }
