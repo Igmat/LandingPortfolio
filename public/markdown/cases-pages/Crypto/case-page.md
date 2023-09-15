@@ -1,3 +1,0 @@
-### One title
-
-Some text

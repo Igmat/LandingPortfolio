@@ -15,7 +15,7 @@ declare const require: {
     };
 };
 
-const context = require.context('../../../../public/markdown/cases-home', true, /\.md$/);
+const context = require.context('../../../../public/markdown/cases', true, /case\.md$/);
 
 export const NewCase = (): any => {
     const [posts, setPosts] = useState<string[]>([]);
@@ -25,7 +25,7 @@ export const NewCase = (): any => {
             try {
                 const postTexts = await Promise.all(
                     context.keys().map(async (file: any) => {
-                        const res = await fetch(`./markdown/cases-home/${file}`);
+                        const res = await fetch(`./markdown/cases/${file.slice(2)}`);
                         const text = await res.text();
                         return text;
                     })
@@ -45,16 +45,17 @@ export const NewCase = (): any => {
                 <section key={i} className={styles.sectionWrapper}>
                     <div className={styles.sectionTextWrapper}>
                         <ReactMarkdown children={post} />
-                        <Link className={styles.button} to={`${context.keys()[i].slice(1).slice(0, -8)}`}>View Case Study</Link>
+                        <Link className={styles.button} to={`/case${context.keys()[i].toLowerCase().slice(1).slice(0, -8)}`}>View Case Study</Link>
                     </div>
                     <div>
-                        <img className={styles.caseImage} src={`./markdown/cases-home${context.keys()[i].slice(1).slice(0, -8)}/cover-bg.png`} alt="case background" />
+                        <img className={styles.caseImage} src={`./markdown/cases${context.keys()[i].slice(1).slice(0, -8)}/cover-bg.png`} alt="case background" />
                     </div>
                 </section>
             )
             )
         }
     </>)
-
 }
 
+// context.keys()[i].toLowerCase().slice(1).slice(0, -8)} вычислить отдельно внутри этого компонента
+//вынести в компонент с пропсами 
