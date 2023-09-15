@@ -52,6 +52,7 @@ export const NewCasePage = () => {
         <main>
             <Casecard name={mycase!} post={shortCasePost} isShownButton={false} />
             <ReactMarkdown children={fullCasePost} />
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis illo et harum, modi incidunt neque iure consectetur dicta dolore, excepturi porro fugit, sed voluptatibus voluptate ipsam nostrum ullam autem praesentium!</p>
         </main>
     );
 }

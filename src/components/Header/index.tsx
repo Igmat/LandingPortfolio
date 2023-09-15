@@ -6,21 +6,21 @@ export const Header = () => {
     return (
         <header className={styles.header}>
             <nav>
-                <Link to="home" className={styles.menuLogo}>
+                <Link to="/" className={styles.menuLogo}>
                     <LogoDark />
                 </Link>
                 <ul className={styles.menu}>
                     <li className={styles.menuButton}>
-                        <Link to="home" className={styles.menuAnchor}>Home</Link>
+                        <Link to="/" className={styles.menuAnchor}>Home</Link>
                     </li>
                     <li className={styles.menuButton}>
                         <a className={styles.menuAnchor} href="#about">About</a>
                     </li>
                     <li className={styles.menuButton}>
-                        <Link to="cases" className={styles.menuAnchor}>Work</Link>
+                        <a href="#cases" className={styles.menuAnchor}>Work</a>
                     </li>
                     <li className={styles.menuButton}>
-                        <a className={styles.menuAnchor}>Contact</a>
+                        <a href="#contact" className={styles.menuAnchor}>Contact</a>
                     </li>
                 </ul>
             </nav>
