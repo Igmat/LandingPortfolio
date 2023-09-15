@@ -1,5 +1,3 @@
-## Full case New Case
-
 ## Challenge Statement:
 
 The primary challenge is to optimize Corporate Travel Efficiency for Maximum Savings while ensuring that business travelers receive top-notch service and support. Striking the right balance between cost control and traveler comfort, productivity, and safety is pivotal

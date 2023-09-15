@@ -25,14 +25,14 @@ export const NewCasePage = () => {
     useEffect(() => {
         async function fetchCases() {
             try {
-                  const resFull = await fetch(`/markdown/cases/${mycase}/full.md`);
-                    const textFullCase = await resFull.text();
-                    setFullCasePost(textFullCase);
-                
-                    const res = await fetch(`/markdown/cases/${mycase}/case.md`);
-                    const textShortCase = await res.text();
-                    setShortCasePost(textShortCase);
-                }
+                const resFull = await fetch(`/markdown/cases/${mycase}/full.md`);
+                const textFullCase = await resFull.text();
+                setFullCasePost(textFullCase);
+
+                const res = await fetch(`/markdown/cases/${mycase}/case.md`);
+                const textShortCase = await res.text();
+                setShortCasePost(textShortCase);
+            }
 
             catch (error) {
                 console.error(error);
@@ -50,9 +50,15 @@ export const NewCasePage = () => {
 
     return (
         <main>
-            <Casecard name={mycase!} post={shortCasePost} isShownButton={false} />
-            <ReactMarkdown children={fullCasePost} />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis illo et harum, modi incidunt neque iure consectetur dicta dolore, excepturi porro fugit, sed voluptatibus voluptate ipsam nostrum ullam autem praesentium!</p>
+            <div className={styles.mainWrapper}>
+                <div className={styles.caseCardWrapper}>
+                    <Casecard name={mycase!} post={shortCasePost} isShownButton={false} />
+                </div>
+                <div className={styles.reactMarkDown}>
+                    <ReactMarkdown children={fullCasePost} />
+                </div>
+            </div>
+
         </main>
     );
 }

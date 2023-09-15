@@ -1,0 +1,113 @@
+main {
+    background-color: #fff;
+}
+
+.mainWrapper {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    section {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .caseCardWrapper {
+        width: 100%;
+        margin-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        justify-content: center;
+    }
+
+    & .reactMarkDown {
+        max-width: 1020px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        h2 {
+            color: #132238;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 40px;
+            margin-bottom: 32px;
+        }
+
+        p {
+            color: #424E60;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 30px;
+        }
+
+        h2 + p {
+            margin-bottom: 100px;
+        }
+
+        h2 + ol {
+            margin-bottom: 100px;
+        }
+
+        li {
+            color: #424E60;
+            list-style-type: decimal; 
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 30px;
+        }
+
+        h3 {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 40px;
+            color: #132238;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        h3 + p {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        h3 + p + p {
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .mainWrapper {
+
+        & .caseCardWrapper {}
+
+        & .reactMarkDown {}
+
+    }
+}
+
+@media (max-width: 786px) {
+    .mainWrapper {
+
+        & .caseCardWrapper {}
+
+        & .reactMarkDown {}
+
+    }
+}
