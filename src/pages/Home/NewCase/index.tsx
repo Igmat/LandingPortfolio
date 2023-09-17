@@ -25,9 +25,16 @@ export const NewCase = (): any => {
                         const nameOfCase = context.keys()[i].toLowerCase().slice(1).slice(0, -8);
                         const res = await fetch(`/markdown/cases/${file.slice(2)}`);
                         const text = await res.text();
+
+                        const resStyles = await fetch(`/markdown/cases/${nameOfCase}/styles.json`);
+                        const styles = await resStyles.json();
+
+                        console.log(styles);
+                        
                         return {
                             post: text,
                             name: nameOfCase,
+                            styles: styles
                         };
                     })
                 );
@@ -48,6 +55,7 @@ export const NewCase = (): any => {
                 key={i}
                 post={post.post}
                 name={post.name}
+                styles={post.styles}
                 isShownButton={true}
             />
         ))
@@ -55,5 +63,3 @@ export const NewCase = (): any => {
     </>)
 }
 
-// context.keys()[i].toLowerCase().slice(1).slice(0, -8)} вычислить отдельно внутри этого компонента
-//вынести в компонент с пропсами 

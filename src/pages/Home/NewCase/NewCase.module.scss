@@ -2,23 +2,17 @@
     max-width: 1017px;
     margin: 0 auto 40px;
     border-radius: 16px;
-    background: #F4F5F9;;
     box-shadow: 0px 36px 105px 0px rgba(43, 56, 76, 0.1);
     overflow: hidden;
     display: grid;
     grid-template-columns: auto 500px;
-    gap: 24px;
-    
-    & .sectionTextWrapper {
-        padding-left: 102px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 24px;
+
+    .sectionTextWrapper {
+        padding-left: 20%;
+        padding-bottom: 20%;
+        padding-top: 20%;
 
         & h3 {
-            color: #2B384C;
             font-size: 24px;
             font-weight: 600;
             line-height: 100%;
@@ -26,41 +20,37 @@
         }
 
         & p {
-            color: #2B384C;
             grid-area: p;
             font-size: 14px;
             font-weight: 400;
             line-height: 20px;
-            /*margin-bottom: 24px;*/
+            margin-bottom: 24px;
         }
     }
 
-    & div + div {
+    & div+div {
         overflow: hidden;
         max-width: 500px;
 
         & img {
             width: 100%;
+            height: auto;
         }
     }
-    
+
 }
 
 .button {
+    display: inline-block;
     padding: 12px 24px;
     border-radius: 4px;
     background-color: #fff;
-    border: 1px solid  #C930FF;
-    color:  #C930FF;
+    border: 1px solid #C930FF;
+    color: #C930FF;
     font-size: 16px;
-    font-style: normal;
     font-weight: 600;
     line-height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    grid-area: button;
+    text-align: center;
     z-index: 999;
 
     &:hover {
@@ -75,4 +65,40 @@
             }
         }
     }
+}
+
+@media (max-width: 1200px) {
+    .sectionWrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0;
+        margin: 0 auto;
+        padding-bottom: 40px;
+
+        .sectionTextWrapper {
+            padding: 0;
+            padding-top: 27px;
+
+            & h3 {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 100%
+            }
+
+            & p { display: none; }
+
+        }
+
+
+    }
+
+    div+div {
+
+        & img {}
+
+    }
+
+
 }
