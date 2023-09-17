@@ -1,0 +1,49 @@
+.burger {
+    padding: 2px;
+    width: 22px;
+    height: 22px;
+    display: none;
+
+    .burgerLine {
+        width: 20px;
+        height: 2px;
+        background-color: #2B384C;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: #2B384C;
+            margin: 6px 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 6px;
+            left: 0;
+            width: 20px;
+            height: 2px;
+            background-color: #2B384C;
+            margin: 6px 0;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .burger {
+        display: block;
+        cursor: pointer;
+        margin-right: 29px;
+    }
+}
+    

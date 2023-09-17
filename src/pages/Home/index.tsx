@@ -10,7 +10,7 @@ export const Home = () => {
         <main className={styles.mainSection}>
             <Hero />
             <About />
-            <Case />
+            {/*<Case />*/}
             <NewCase />
         </main>
     )

@@ -72,6 +72,7 @@
     .sectionWrapper {
         transform: translate(0, -50%);
         z-index: 20;
+        margin-bottom: -240px;
     }
 }
 
@@ -90,7 +91,6 @@
 
     .aboutWrapper {
         
-
         & .aboutText {
             line-height: 20px;
             font-size: 14px;
