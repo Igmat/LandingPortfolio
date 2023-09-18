@@ -47,7 +47,7 @@ export const Header = () => {
                         <a className={styles.menuAnchor} href="#cases">Work</a>
                     </li>
                     <li className={styles.menuButton}>
-                        <a className={styles.menuAnchor} href="#contact">Contact</a>
+                        <a className={styles.menuAnchor} href="#contact">Say Hello!</a>
                     </li>
                 </ul>
                 <Burger handleClick={handleClick} />
