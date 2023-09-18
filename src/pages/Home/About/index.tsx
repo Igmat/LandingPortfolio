@@ -5,9 +5,28 @@ import { LinkedInIcon } from './Social/LinkedInIcon'
 import { BehanceIcon } from './Social/BehanceIcon'
 import { Button } from '../../../components/Button'
 import { ArrowDownload } from './ArrowDownload'
+import { useEffect, useState } from 'react'
 import styles from './About.module.scss'
 
 export const About = () => {
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    const handleWindowResize = () => {
+        setIsMobile(window.innerWidth <= 768);
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleWindowResize);
+
+        return () => {
+            window.removeEventListener('resize', handleWindowResize);
+        };
+    }, []);
+
+    const buttonLabel = isMobile ? "CV" : "Download CV";
+
+
     return (
         <section id='about' className={styles.sectionWrapper}>
             <article className={styles.aboutWrapper}>
@@ -17,7 +36,7 @@ export const About = () => {
                 </p>
                 <div className={styles.buttonWrapper}>
                     <Button>My projects</Button>
-                    <Button><ArrowDownload/>Download CV</Button>
+                    <Button><ArrowDownload />{buttonLabel}</Button>
                 </div>
             </article>
             <ul className={styles.social}>

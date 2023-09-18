@@ -5,10 +5,11 @@ type ButtonProps = {
     children: string | ReactNode
 }
 
-export const Button = ({ children }: ButtonProps) => {
+export const Button = (props: ButtonProps) => {
+
     return (
         <button className={styles.button}>
-            {children}
+            {props.children}
         </button>
     )
 }
