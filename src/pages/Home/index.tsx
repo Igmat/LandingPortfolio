@@ -11,7 +11,7 @@ export const Home = () => {
             <Hero />
             <About />
             {/*<Case />*/}
-            <NewCase />
+            {/*<NewCase /> НА МОМЕНТ ПЕРЕДЕЛЫВАНИЯ ВЕРСТКИ - ОТКЛЮЧЕНО*/}
         </main>
     )
 }

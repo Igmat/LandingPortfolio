@@ -46,7 +46,35 @@
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 960px) and (min-width: 769px){
+    .heroImageWrapper {
+        img {
+            width: 282px;
+            height: 282px;
+        }
+
+        &::before {
+            width: 18px;
+            height: 557px;
+            top: 0;
+            left: 103px;
+        }
+
+        &::after {
+            width: 104px;
+            height: 483px;
+        }
+
+        svg {
+            top: 7px;
+            left: 7px;
+            width: 316px;
+            height: 316px;
+        }
+    }
+}
+
+/*    
     .heroImageWrapper {
         position: relative;
         align-self: center;
@@ -61,21 +89,16 @@
         }
 
         &::before {
-            top: -107px;
-            left: 0;
-            transform: rotate(33deg);
-            width: 30px;
-            height: 722px;
+            width: 18px;
+            height: 557px;
             z-index: 10;
+            top: 0;
+            left: 103px;
         }
 
         &::after {
-            top: -110px;
-            right: 302px;
-            transform: rotate(33deg);
-            background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,198,255,1) 10%);
-            width: 137px;
-            height: 1200px;
+            width: 104px;
+            height: 483px;
         }
 
         & svg {
@@ -86,9 +109,45 @@
         }
     }
 }
-
+*/
 @media (max-width: 768px) {
     .heroImageWrapper {
+        position: relative;
+        align-self: center;
+        justify-self: center;
+        left: 0;
+        top: 0;
         margin-right: 0;
+
+        & img {
+            width: 282px;
+            height: 282px;
+            position: relative;
+        }
+
+        &::before {
+            top: -107px;
+            left: 0;
+            transform: rotate(33deg);
+            width: 30px;
+            height: 722px;
+            z-index: none;
+        }
+
+        &::after {
+            transform: rotate(33deg);
+            background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,198,255,1) 10%);
+            width: 137px;
+            height: 613px;
+            top: -120px;
+            right: 107px;
+        }
+
+        & svg {
+            top: 7px;
+            left: 7px;
+            width: 316px;
+            height: 316px;
+        }
     }
 }
