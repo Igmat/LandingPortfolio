@@ -1,8 +1,8 @@
 import ReactMarkdown from 'react-markdown';
-import styles from './NewCasePage.module.scss'
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Casecard, StyleProps } from '../Home/NewCase/Casecard';
+import styles from './NewCasePage.module.scss'
 
 declare const require: {
     context(
@@ -25,7 +25,8 @@ export const NewCasePage = () => {
         title: "",
         subtitle: "",
         background: ""
-        });
+    });
+    const [keywords, setKeywords] = useState<string[]>([]);
 
     useEffect(() => {
         async function fetchCases() {
@@ -41,6 +42,11 @@ export const NewCasePage = () => {
                 const resStyles = await fetch(`/markdown/cases/${mycase}/styles.json`);
                 const styles = await resStyles.json();
                 setCustomStyles(styles);
+
+                const keywords = await fetch(`/markdown/cases/${mycase}/keywords.json`);
+                const keywordsArray = await keywords.json();
+                console.log(keywordsArray);
+                setKeywords(keywordsArray);
             }
 
             catch (error) {
@@ -61,11 +67,22 @@ export const NewCasePage = () => {
         <main>
             <div className={styles.mainWrapper}>
                 <div className={styles.caseCardWrapper}>
-                    <Casecard name={mycase!} post={shortCasePost} isShownButton={false} styles={customStyles}/>
+                    <Casecard name={mycase!} post={shortCasePost} isShownButton={false} styles={customStyles} />
                 </div>
-                <div className={styles.reactMarkDown}>
-                    <ReactMarkdown children={fullCasePost} />
+                <div className={styles.clearfix}>
+                    <div className={styles.keywords}>
+                        <h5>Keywords</h5>
+                        <ul>
+                        {
+                        keywords.map((keyword, i) => (
+                            <li className={styles.keyword} key={i}>{keyword}</li>
+                        ))
+                    }</ul></div>
+                    <div className={styles.reactMarkDown}>
+                        <ReactMarkdown children={fullCasePost} />
+                    </div>
                 </div>
+
             </div>
 
         </main>
