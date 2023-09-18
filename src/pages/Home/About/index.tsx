@@ -41,27 +41,27 @@ export const About = () => {
             </article>
             <ul className={styles.social}>
                 <li className={styles.socialIcon}>
-                    <a href="#">
+                    <a href="#" target="_blank">
                         <FacebookIcon />
                     </a>
                 </li>
                 <li className={styles.socialIcon}>
-                    <a href="#">
+                    <a href="#" target="_blank">
                         <DribbleIcon />
                     </a>
                 </li>
                 <li className={styles.socialIcon}>
-                    <a href="#">
+                    <a href="#" target="_blank">
                         <InstagramIcon />
                     </a>
                 </li>
                 <li className={styles.socialIcon}>
-                    <a href="#">
+                    <a href="https://www.linkedin.com/in/julia-savchuk-46b922107/" target="_blank">
                         <LinkedInIcon />
                     </a>
                 </li>
                 <li className={styles.socialIcon}>
-                    <a href="#">
+                    <a href="#" target="_blank">
                         <BehanceIcon />
                     </a>
                 </li>

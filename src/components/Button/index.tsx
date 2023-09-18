@@ -3,13 +3,14 @@ import styles from './Button.module.scss'
 
 type ButtonProps = {
     children: string | ReactNode
+    link?: string
 }
 
 export const Button = (props: ButtonProps) => {
 
     return (
-        <button className={styles.button}>
+        <a href={props.link} className={styles.button}>
             {props.children}
-        </button>
+        </a>
     )
 }

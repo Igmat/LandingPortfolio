@@ -32,7 +32,7 @@ export const Header = () => {
                                 <a href="#cases" className={styles.menuAnchor} onClick={handleClick}>Work</a>
                             </li>
                             <li className={styles.menuButton}>
-                                <a href="#contact" className={styles.menuAnchor} onClick={handleClick}>Contact</a>
+                                <a href={"mailto:yulia.savchuk.a@gmail.com"} className={styles.menuAnchor} onClick={handleClick}>Say Hello!</a>
                             </li>
                         </ul>
                     </div> : null}
@@ -47,7 +47,7 @@ export const Header = () => {
                         <a className={styles.menuAnchor} href="#cases">Work</a>
                     </li>
                     <li className={styles.menuButton}>
-                        <a className={styles.menuAnchor} href="#contact">Say Hello!</a>
+                        <a href={"mailto:yulia.savchuk.a@gmail.com"} className={styles.menuAnchor}>Say Hello!</a>
                     </li>
                 </ul>
                 <Burger handleClick={handleClick} />

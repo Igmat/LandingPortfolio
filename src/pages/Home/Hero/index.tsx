@@ -11,7 +11,7 @@ export const Hero = () => {
                     <article className={styles.articleWrapper}>
                         <h1>Journey Through <br /> UX/UI Artistry</h1>
                         <p>Crafting Captivating User-Centric and Pixel-Perfect Designs</p>
-                        <Button>Say Hello!</Button>
+                        <Button link={"mailto:yulia.savchuk.a@gmail.com"}>Say Hello!</Button>
                     </article>
                     <HeroImage />
                     <Stats />

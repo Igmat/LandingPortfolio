@@ -1,7 +1,6 @@
 import ReactMarkdown from 'react-markdown';
 import { Link } from 'react-router-dom';
 import styles from './NewCase.module.scss';
-import { ReactNode } from 'react';
 
 export type StyleProps = {
     ["title"]: string,
@@ -19,7 +18,7 @@ export type CaseCardProps = {
 export const Casecard = (props: CaseCardProps) => {
 
     return (
-        <section className={styles.sectionWrapper} style={{background: props.styles?.background }}>
+        <section id="cases" className={styles.sectionWrapper} style={{background: props.styles?.background }}>
             <div className={styles.sectionTextWrapper}>
                 <ReactMarkdown components={{
                     h3: ({ node, ...h3Props }) => <h3 style={{ color: props.styles?.title }} {...h3Props} />,
