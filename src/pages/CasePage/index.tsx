@@ -15,6 +15,10 @@ declare const require: {
     };
 };
 
+type KeywordsType = {
+    "Keywords": string[]
+}
+
 
 export const NewCasePage = () => {
     const { mycase } = useParams<{ mycase: string }>();
@@ -26,7 +30,7 @@ export const NewCasePage = () => {
         subtitle: "",
         background: ""
     });
-    const [keywords, setKeywords] = useState<string[]>([]);
+    const [keywords, setKeywords] = useState<KeywordsType>({ "Keywords": [] });
 
     useEffect(() => {
         async function fetchCases() {
@@ -45,7 +49,6 @@ export const NewCasePage = () => {
 
                 const keywords = await fetch(`/markdown/cases/${mycase}/keywords.json`);
                 const keywordsArray = await keywords.json();
-                console.log(keywordsArray);
                 setKeywords(keywordsArray);
             }
 
@@ -73,16 +76,17 @@ export const NewCasePage = () => {
                     <div className={styles.keywords}>
                         <h5>Keywords</h5>
                         <ul>
-                        {
-                        keywords.map((keyword, i) => (
-                            <li className={styles.keyword} key={i}>{keyword}</li>
-                        ))
-                    }</ul></div>
+                            {
+                                keywords.Keywords &&
+
+                                keywords.Keywords.map((keyword, i) => (
+                                    <li className={styles.keyword} key={i}>{keyword}</li>
+                                ))
+                            }</ul></div>
                     <div className={styles.reactMarkDown}>
                         <ReactMarkdown children={fullCasePost} />
                     </div>
                 </div>
-
             </div>
 
         </main>

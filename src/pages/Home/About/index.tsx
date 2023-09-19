@@ -8,6 +8,13 @@ import { ArrowDownload } from './ArrowDownload'
 import { useEffect, useState } from 'react'
 import styles from './About.module.scss'
 
+type SocialLinksType = {
+    Facebook: string
+    Dribble: string
+    Instagram: string
+    LinkedIn: string
+    Behance: string
+}
 export const About = () => {
 
     const [isMobile, setIsMobile] = useState(false);
@@ -27,6 +34,50 @@ export const About = () => {
     const buttonLabel = isMobile ? "CV" : "Download CV";
 
 
+    const [socialLinks, setSocialLinks] = useState<SocialLinksType>({
+        Facebook: "",
+        Dribble: "",
+        Instagram: "",
+        LinkedIn: "",
+        Behance: "",
+    });
+
+    useEffect(() => {
+        async function fetchSocialLinks(){
+        try {
+            const res = await fetch('/socialLinks.json');
+            const links = await res.json();
+            setSocialLinks(links);
+        }
+        catch (error) {
+            console.error(error);
+            }
+        }
+
+        let unmounted = false;
+
+        fetchSocialLinks();
+
+        return () => { unmounted = true };
+    }, []);
+
+
+    const svgMap = {
+        Facebook: FacebookIcon,
+        Dribble: DribbleIcon,
+        Instagram: InstagramIcon,
+        LinkedIn: LinkedInIcon,
+        Behance: BehanceIcon
+    }
+
+    const socialLinksArray = Object.entries<string, SocialLinksType>(socialLinks).map(([name, url]) => ({
+        name,
+        url,
+        IconComponent: svgMap[name] 
+    }));
+
+    console.log(socialLinksArray);
+    
     return (
         <section id='about' className={styles.sectionWrapper}>
             <article className={styles.aboutWrapper}>
@@ -36,11 +87,24 @@ export const About = () => {
                 </p>
                 <div className={styles.buttonWrapper}>
                     <Button>My projects</Button>
-                    <Button><ArrowDownload />{buttonLabel}</Button>
+                    <Button link={"/CV/CV.pdf"} isDownload={true}><ArrowDownload />{buttonLabel}</Button>
                 </div>
             </article>
             <ul className={styles.social}>
-                <li className={styles.socialIcon}>
+                {socialLinksArray.map(({name, url, IconComponent })=> 
+                    <li className={styles.socialIcon}>
+                        <a href={url} target="_blank">
+                            <IconComponent />
+                        </a>
+                    </li>
+                )}
+            </ul>
+        </section>
+    )
+}
+
+{/*
+<li className={styles.socialIcon}>
                     <a href="#" target="_blank">
                         <FacebookIcon />
                     </a>
@@ -56,7 +120,7 @@ export const About = () => {
                     </a>
                 </li>
                 <li className={styles.socialIcon}>
-                    <a href="https://www.linkedin.com/in/julia-savchuk-46b922107/" target="_blank">
+                    <a href="#" target="_blank">
                         <LinkedInIcon />
                     </a>
                 </li>
@@ -65,7 +129,4 @@ export const About = () => {
                         <BehanceIcon />
                     </a>
                 </li>
-            </ul>
-        </section>
-    )
-}
+*/}

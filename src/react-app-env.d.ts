@@ -2,6 +2,11 @@
 /// <reference types="react" />
 /// <reference types="react-dom" />
 
+interface ObjectConstructor {
+    keys<T>(o: T): (keyof T)[];
+    entries<E, T extends {[index: string]: E}>(o: T ): [keyof T, E][];
+}
+
 declare namespace NodeJS {
   interface ProcessEnv {
     readonly NODE_ENV: 'development' | 'production' | 'test';
@@ -74,3 +79,5 @@ declare module '*.md' {
   const content: string;
   export default content;
 }
+
+
