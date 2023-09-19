@@ -1,10 +1,12 @@
-[
-    "SaaS",
-    "B2B",
-    "Dashboard",
-    "Design System",
-    "Branding",
-    "Travel",
-    "Management",
-    "Consulting"
-]
+{
+    "Keywords": [
+        "SaaS",
+        "B2B",
+        "Dashboard",
+        "Design System",
+        "Branding",
+        "Travel",
+        "Management",
+        "Consulting"
+    ]
+}

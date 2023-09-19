@@ -85,7 +85,7 @@
     }
 }
 
-@media screen and (max-width: 1054px) {
+@media screen and (max-width: 1110px) {
 
     .heroSection {
 
@@ -98,8 +98,9 @@
         }
     }
 }
-@media (max-width: 960px) and (min-width: 769px) {
+@media (max-width: 1112px) {
      .heroSection {
+        padding: 0 60px;
 
         .background {}
 
@@ -121,7 +122,7 @@
 
 }
 
-@media (max-width: 848px) {
+@media (max-width: 948px) {
      .heroSection {
 
         .background {}
@@ -135,13 +136,18 @@
             h1 {
                 font-size: 38px;
             }
+
+            p {
+                max-width: 319px;
+                line-height: 30px;
+            }
         }
      }
 }
 
 @media (max-width: 768px) {
     .heroSection {
-        padding-top: 0;
+        padding: 0;
 
         .articleWrapper {
             background: none;

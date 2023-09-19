@@ -28,9 +28,7 @@ export const NewCase = (): any => {
 
                         const resStyles = await fetch(`/markdown/cases/${nameOfCase}/styles.json`);
                         const styles = await resStyles.json();
-
-                        console.log(styles);
-                        
+   
                         return {
                             post: text,
                             name: nameOfCase,
@@ -39,7 +37,6 @@ export const NewCase = (): any => {
                     })
                 );
                 setPosts(postTexts);
-                console.log(posts);
                 
             } catch (error) {
                 console.error(error);

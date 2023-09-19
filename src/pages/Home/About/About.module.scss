@@ -69,13 +69,19 @@
 }
 
 @media (max-width: 960px) {
-    /*
+
     .sectionWrapper {
-        transform: translate(0, -50%);
-        z-index: 20;
-        margin-bottom: -240px;
+        margin-bottom: -200px;
     }
-    */
+
+}
+
+@media (max-width: 900px) {
+
+    .sectionWrapper {
+        z-index: 50;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -84,7 +90,7 @@
         padding: 60px 28px 40px;
         flex-direction: column;
         margin-bottom: 0;
-    
+        border-radius: 0;
 
     & .social {
             flex-direction: row;
