@@ -4,21 +4,9 @@ import { useParams } from 'react-router-dom';
 import { Casecard, StyleProps } from '../Home/NewCase/Casecard';
 import styles from './NewCasePage.module.scss'
 
-declare const require: {
-    context(
-        directory: string,
-        useSubdirectories: boolean,
-        regExp: RegExp,
-    ): {
-        keys(): string[];
-        <T>(id: string): T;
-    };
-};
-
 type KeywordsType = {
     "Keywords": string[]
 }
-
 
 export const NewCasePage = () => {
     const { mycase } = useParams<{ mycase: string }>();
@@ -57,14 +45,9 @@ export const NewCasePage = () => {
             }
         }
 
-        let unmounted = false;
-
         fetchCases();
 
-        return () => {
-            unmounted = true;
-        };
-    }, []);
+    }, [mycase]);
 
     return (
         <main>
@@ -76,19 +59,19 @@ export const NewCasePage = () => {
                     <div className={styles.keywords}>
                         <h5>Keywords</h5>
                         <ul>
-                            {
-                                keywords.Keywords &&
+                            {keywords.Keywords &&
 
                                 keywords.Keywords.map((keyword, i) => (
                                     <li className={styles.keyword} key={i}>{keyword}</li>
                                 ))
-                            }</ul></div>
+                            }
+                        </ul>
+                    </div>
                     <div className={styles.reactMarkDown}>
                         <ReactMarkdown children={fullCasePost} />
                     </div>
                 </div>
             </div>
-
         </main>
     );
 }

@@ -21,8 +21,8 @@ export const Casecard = (props: CaseCardProps) => {
         <section id="cases" className={styles.sectionWrapper} style={{background: props.styles?.background }}>
             <div className={styles.sectionTextWrapper}>
                 <ReactMarkdown components={{
-                    h3: ({ node, ...h3Props }) => <h3 style={{ color: props.styles?.title }} {...h3Props} />,
-                    p: ({ node, ...pProps }) => <p style={{ color: props.styles?.subtitle }} {...pProps} />
+                    h3: ({ node, ...h3Props }) => <h3 style={{ color: props.styles?.title }} {...h3Props}>{h3Props.children}</h3>,
+                    p: ({ node, ...pProps }) => <p style={{ color: props.styles?.subtitle }} {...pProps}>{pProps.children}</p>
                 }}>
                     {props.post}
                 </ReactMarkdown>

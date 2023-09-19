@@ -54,11 +54,8 @@ export const About = () => {
             }
         }
 
-        let unmounted = false;
-
         fetchSocialLinks();
 
-        return () => { unmounted = true };
     }, []);
 
 
@@ -93,7 +90,7 @@ export const About = () => {
             <ul className={styles.social}>
                 {socialLinksArray.map(({name, url, IconComponent })=> 
                     <li className={styles.socialIcon}>
-                        <a href={url} target="_blank">
+                        <a href={url} target="_blank" rel="noreferrer">
                             <IconComponent />
                         </a>
                     </li>
@@ -102,31 +99,3 @@ export const About = () => {
         </section>
     )
 }
-
-{/*
-<li className={styles.socialIcon}>
-                    <a href="#" target="_blank">
-                        <FacebookIcon />
-                    </a>
-                </li>
-                <li className={styles.socialIcon}>
-                    <a href="#" target="_blank">
-                        <DribbleIcon />
-                    </a>
-                </li>
-                <li className={styles.socialIcon}>
-                    <a href="#" target="_blank">
-                        <InstagramIcon />
-                    </a>
-                </li>
-                <li className={styles.socialIcon}>
-                    <a href="#" target="_blank">
-                        <LinkedInIcon />
-                    </a>
-                </li>
-                <li className={styles.socialIcon}>
-                    <a href="#" target="_blank">
-                        <BehanceIcon />
-                    </a>
-                </li>
-*/}
