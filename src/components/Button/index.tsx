@@ -4,12 +4,13 @@ import styles from './Button.module.scss'
 type ButtonProps = {
     children: string | ReactNode
     link?: string
+    isDownload?: boolean
 }
 
 export const Button = (props: ButtonProps) => {
 
     return (
-        <a href={props.link} className={styles.button}>
+        <a href={props.link} className={styles.button} download={props.isDownload}>
             {props.children}
         </a>
     )
