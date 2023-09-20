@@ -12,26 +12,26 @@ Design an intuitive and user-centric interface that seamlessly integrates stream
 
 I developed these personas to gain a deeper understanding of typical user needs and preferences, which has contributed to a more user-centric product.
 
-![case image 1](/markdown/cases/crypto/case-img-1.png)
+![case image 1](./markdown/cases/crypto/case-img-1.png)
 
 ### User Flow
 
 I crafted these user flows to gain a deeper understanding of typical user journeys and interactions
 
-![case image 2](/markdown/cases/crypto/case-img-2.png)
+![case image 2](./markdown/cases/crypto/case-img-2.png)
 
 ### Wireframing
 
 I created these wireframes to explore and visualize typical user interactions and design concepts
 
-![case image 3](/markdown/cases/crypto/case-img-3.png)
+![case image 3](./markdown/cases/crypto/case-img-3.png)
 
 ### UI Design
 
-![case image 4](/markdown/cases/crypto/case-img-4.png)
+![case image 4](./markdown/cases/crypto/case-img-4.png)
 
 ### Prototyping
 
 A UI prototype demonstrates a product's design and functionality to stakeholders, clients, and potential users
 
-![case image 5](/markdown/cases/crypto/case-img-4.png)
+![case image 5](./markdown/cases/crypto/case-img-4.png)

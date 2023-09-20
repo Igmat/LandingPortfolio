@@ -29,7 +29,7 @@ export const Casecard = (props: CaseCardProps) => {
                 {props.isShownButton ? <Link className={styles.button} to={`case${props.name}`}>View Case Study</Link> : (null)}
             </div>
             <div>
-                <img className={styles.caseImage} src={`/markdown/cases/${props.name}/cover-bg.png`} alt="case background" />
+                <img className={styles.caseImage} src={`./markdown/cases/${props.name}/cover-bg.png`} alt="case background" />
             </div>
         </section>)
 }

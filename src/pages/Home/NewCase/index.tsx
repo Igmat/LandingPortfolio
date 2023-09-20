@@ -13,10 +13,10 @@ export const NewCase = (): any => {
                 const postTexts = await Promise.all(
                     context.map(async (file, i) => {
                         const nameOfCase = file.toLowerCase().slice(1).slice(0, -8);
-                        const res = await fetch(`/markdown/cases/${file.slice(2)}`);
+                        const res = await fetch(`./markdown/cases/${file.slice(2)}`);
                         const text = await res.text();
 
-                        const resStyles = await fetch(`/markdown/cases/${nameOfCase}/styles.json`);
+                        const resStyles = await fetch(`./markdown/cases/${nameOfCase}/styles.json`);
                         const styles = await resStyles.json();
    
                         return {

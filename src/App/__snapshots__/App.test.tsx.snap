@@ -264,7 +264,7 @@ exports[`renders landing page 1`] = `
           <a
             className="button"
             download={true}
-            href="/CV/CV.pdf"
+            href="./CV/CV.pdf"
           >
             <svg
               fill="none"

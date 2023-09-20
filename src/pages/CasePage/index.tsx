@@ -23,19 +23,19 @@ export const NewCasePage = () => {
     useEffect(() => {
         async function fetchCases() {
             try {
-                const resFull = await fetch(`/markdown/cases/${mycase}/full.md`);
+                const resFull = await fetch(`./markdown/cases/${mycase}/full.md`);
                 const textFullCase = await resFull.text();
                 setFullCasePost(textFullCase);
 
-                const res = await fetch(`/markdown/cases/${mycase}/case.md`);
+                const res = await fetch(`./markdown/cases/${mycase}/case.md`);
                 const textShortCase = await res.text();
                 setShortCasePost(textShortCase);
 
-                const resStyles = await fetch(`/markdown/cases/${mycase}/styles.json`);
+                const resStyles = await fetch(`./markdown/cases/${mycase}/styles.json`);
                 const styles = await resStyles.json();
                 setCustomStyles(styles);
 
-                const keywords = await fetch(`/markdown/cases/${mycase}/keywords.json`);
+                const keywords = await fetch(`./markdown/cases/${mycase}/keywords.json`);
                 const keywordsArray = await keywords.json();
                 setKeywords(keywordsArray);
             }

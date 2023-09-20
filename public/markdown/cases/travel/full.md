@@ -20,28 +20,28 @@ Gathering Insights: Collected insights by asking travel managers about their cur
 
 I crafted these user flows to gain a deeper understanding of typical user journeys and interactions
 
-![case image 1](/markdown/cases/travel/case-img-1.png)
+![case image 1](./markdown/cases/travel/case-img-1.png)
 
 ### Branding
 
-![case image 2](/markdown/cases/travel/case-img-2.png)
+![case image 2](./markdown/cases/travel/case-img-2.png)
 
 ### UI Design
 
 I created these wireframes to explore and visualize typical user interactions and design concepts
 
-![case image 3](/markdown/cases/travel/case-img-3.png)
+![case image 3](./markdown/cases/travel/case-img-3.png)
 
-![case image 4](/markdown/cases/travel/case-img-4.png)
+![case image 4](./markdown/cases/travel/case-img-4.png)
 
 ### Design system
 
 A huge design system - a comprehensive and meticulously organized set of design guidelines, principles, components, and assets
 
-![case image 5](/markdown/cases/travel/case-img-5.png)
+![case image 5](./markdown/cases/travel/case-img-5.png)
 
 ### Skeleton Loader
 
-![case image 6](/markdown/cases/travel/case-img-6.png)
+![case image 6](./markdown/cases/travel/case-img-6.png)
 
 ### UI Animation

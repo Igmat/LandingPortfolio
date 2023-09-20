@@ -84,7 +84,7 @@ export const About = () => {
                 </p>
                 <div className={styles.buttonWrapper}>
                     <Button>My projects</Button>
-                    <Button link={"/CV/CV.pdf"} isDownload={true}><ArrowDownload />{buttonLabel}</Button>
+                    <Button link={"./CV/CV.pdf"} isDownload={true}><ArrowDownload />{buttonLabel}</Button>
                 </div>
             </article>
             <ul className={styles.social}>
