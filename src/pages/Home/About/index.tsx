@@ -89,7 +89,7 @@ export const About = () => {
             </article>
             <ul className={styles.social}>
                 {socialLinksArray.map(({name, url, IconComponent })=> 
-                    <li className={styles.socialIcon}>
+                    <li key={name} className={styles.socialIcon}>
                         <a href={url} target="_blank" rel="noreferrer">
                             <IconComponent />
                         </a>
