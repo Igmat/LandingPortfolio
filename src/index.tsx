@@ -1,29 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-import App from './App';
-import { NewCasePage } from './pages/CasePage';
-import { Home } from './pages/Home';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { routing } from './routingConfig';
+import { config } from './casesConfig';
+import { Provider } from './casesContext';
 import './index.scss';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    children: [
-      { path: '/', element: <Home /> },
-      { path: '/case/:mycase', element: <NewCasePage /> },
-    ]
-  }
-])
+const router = createBrowserRouter(routing)
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-      <RouterProvider router={router}/>
+    <Provider value={config}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
 

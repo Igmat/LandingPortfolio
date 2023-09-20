@@ -1,28 +1,18 @@
 import { useState, useEffect } from 'react';
 import { CaseCardProps, Casecard } from './Casecard';
-
-declare const require: {
-    context(
-        directory: string,
-        useSubdirectories: boolean,
-        regExp: RegExp,
-    ): {
-        keys(): string[];
-        <T>(id: string): T;
-    };
-};
-
-const context = require.context('../../../../public/markdown/cases', true, /case\.md$/);
+import { useCases } from '../../../casesContext';
 
 export const NewCase = (): any => {
+    const context = useCases();
+
     const [posts, setPosts] = useState<CaseCardProps[]>([]);
 
     useEffect(() => {
         async function fetchCases() {
             try {
                 const postTexts = await Promise.all(
-                    context.keys().map(async (file: any, i) => {
-                        const nameOfCase = context.keys()[i].toLowerCase().slice(1).slice(0, -8);
+                    context.map(async (file, i) => {
+                        const nameOfCase = file.toLowerCase().slice(1).slice(0, -8);
                         const res = await fetch(`/markdown/cases/${file.slice(2)}`);
                         const text = await res.text();
 
@@ -44,7 +34,7 @@ export const NewCase = (): any => {
         }
 
         fetchCases();
-    }, []);
+    }, [context]);
 
     return (<>
         {posts.map((post, i) => (
