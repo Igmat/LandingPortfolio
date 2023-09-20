@@ -7,7 +7,10 @@ import { config } from './casesConfig';
 import { Provider } from './casesContext';
 import './index.scss';
 
-const router = createBrowserRouter(routing)
+const router = createBrowserRouter(
+  routing,
+  { basename: "/LandingPortfolio/" }
+  )
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

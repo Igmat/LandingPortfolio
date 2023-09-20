@@ -10,5 +10,5 @@ export const routing = [
       { path: '/', element: <Home /> },
       { path: '/case/:mycase', element: <NewCasePage /> },
     ]
-  }
+  },
 ]
