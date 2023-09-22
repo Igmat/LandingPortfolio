@@ -8,8 +8,7 @@ import { Provider } from './casesContext';
 import './index.scss';
 
 const router = createBrowserRouter(
-  routing,
-  { basename: "/LandingPortfolio/" }
+  routing //, { basename: "/LandingPortfolio/" }
   )
 
 const root = ReactDOM.createRoot(
