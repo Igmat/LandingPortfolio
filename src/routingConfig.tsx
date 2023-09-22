@@ -9,6 +9,7 @@ export const routing = [
     children: [
       { path: '/', element: <Home /> },
       { path: '/case/:mycase', element: <NewCasePage /> },
+      { path: '/LandingPortfolio', element: <Home /> },
     ]
   },
 ]
