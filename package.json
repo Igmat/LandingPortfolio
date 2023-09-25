@@ -1,6 +1,6 @@
 {
   "name": "landing",
-  "homepage": "https://igmat.github.io/LandingPortfolio/",
+  "homepage": "${PUBLIC_URL}",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

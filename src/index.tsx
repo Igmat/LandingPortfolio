@@ -7,8 +7,11 @@ import { config } from './casesConfig';
 import { Provider } from './casesContext';
 import './index.scss';
 
+const link = document.querySelector("base") as HTMLBaseElement;
+const basenameLink = link.getAttribute("href") as string;
+
 const router = createBrowserRouter(
-  routing //, { basename: "/LandingPortfolio/" } 
+  routing , { basename: basenameLink } 
   )
 
 const root = ReactDOM.createRoot(

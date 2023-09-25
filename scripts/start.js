@@ -1,5 +1,19 @@
 'use strict';
 
+const { exec } = require('child_process');
+
+// Override PUBLIC_URL
+process.env.PUBLIC_URL = '/'; 
+
+// Execute npm start script
+exec('npm start', (error, stdout, stderr) => {
+  if (error) {
+    console.error(error);
+    return;
+  }
+  console.log(stdout);
+});
+
 // Do this as the first thing so that any code reading it knows the right env.
 process.env.BABEL_ENV = 'development';
 process.env.NODE_ENV = 'development';
