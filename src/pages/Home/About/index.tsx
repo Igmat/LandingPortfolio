@@ -72,8 +72,6 @@ export const About = () => {
         url,
         IconComponent: svgMap[name] 
     }));
-
-    console.log(socialLinksArray);
     
     return (
         <section id='about' className={styles.sectionWrapper}>
