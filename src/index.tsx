@@ -7,11 +7,13 @@ import { config } from './casesConfig';
 import { Provider } from './casesContext';
 import './index.scss';
 
-const link = document.querySelector("base") as HTMLBaseElement;
-const basenameLink = link.getAttribute("href") as string;
+const baseURL = document.querySelector('base')?.getAttribute("href") || "/";
+
+const link = new URL(baseURL, "https://igmat.github.io" );
+console.log(link.pathname);
 
 const router = createBrowserRouter(
-  routing , { basename: basenameLink } 
+  routing , { basename: link.pathname } 
   )
 
 const root = ReactDOM.createRoot(
