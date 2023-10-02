@@ -45,7 +45,7 @@ export const About = () => {
     useEffect(() => {
         async function fetchSocialLinks(){
         try {
-            const res = await fetch('/socialLinks.json');
+            const res = await fetch('./socialLinks.json');
             const links = await res.json();
             setSocialLinks(links);
         }
