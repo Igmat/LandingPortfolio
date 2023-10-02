@@ -13,9 +13,9 @@ exports[`renders landing page 1`] = `
       >
         <svg
           fill="none"
-          height={41}
+          height={60}
           viewBox="0 0 156 41"
-          width={156}
+          width={230}
           xmlns="http://www.w3.org/2000/svg"
         >
           <g
