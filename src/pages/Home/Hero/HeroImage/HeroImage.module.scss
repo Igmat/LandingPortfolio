@@ -12,6 +12,7 @@
         height: 100%;
         border-radius: 50%;
         z-index: 50;
+        border: 18px solid  rgba(56, 171, 255, 0.35);
     }
 
     &::before {
@@ -42,7 +43,7 @@
         left: 0;
         width: 448px;
         height: 448px;
-        z-index: 100;
+       z-index: 100;
     }
 }
 
