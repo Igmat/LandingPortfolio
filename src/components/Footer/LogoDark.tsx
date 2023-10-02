@@ -1,8 +1,8 @@
 export const LogoDark = () => {
   return (
     <svg
-      width={156}
-      height={41}
+      width={230}
+      height={60}
       viewBox="0 0 156 41"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
