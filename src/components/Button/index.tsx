@@ -10,7 +10,7 @@ type ButtonProps = {
 export const Button = (props: ButtonProps) => {
 
     return (
-        <a href={props.link} className={styles.button} download={props.isDownload}>
+        <a href={props.link} className={`${styles.button} ${props.isDownload ? styles.secButton : ''}`} download={props.isDownload}>
             {props.children}
         </a>
     )
