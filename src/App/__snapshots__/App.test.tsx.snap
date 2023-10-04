@@ -108,7 +108,7 @@ exports[`renders landing page 1`] = `
           className="menuButton"
         >
           <a
-            className="menuAnchor"
+            className="menuAnchor button"
             href="mailto:yulia.savchuk.a@gmail.com"
           >
             Say Hello!
@@ -149,7 +149,7 @@ exports[`renders landing page 1`] = `
               Crafting Captivating User-Centric and Pixel-Perfect Designs
             </p>
             <a
-              className="button"
+              className="button "
               href="mailto:yulia.savchuk.a@gmail.com"
             >
               Say Hello!
@@ -249,12 +249,12 @@ exports[`renders landing page 1`] = `
           className="buttonWrapper"
         >
           <a
-            className="button"
+            className="button "
           >
             My projects
           </a>
           <a
-            className="button"
+            className="button secButton"
             download={true}
             href="./CV/CV.pdf"
           >
