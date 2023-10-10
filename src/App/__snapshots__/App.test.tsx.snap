@@ -13,9 +13,9 @@ exports[`renders landing page 1`] = `
       >
         <svg
           fill="none"
-          height={41}
+          height={60}
           viewBox="0 0 156 41"
-          width={156}
+          width={230}
           xmlns="http://www.w3.org/2000/svg"
         >
           <g
@@ -108,7 +108,7 @@ exports[`renders landing page 1`] = `
           className="menuButton"
         >
           <a
-            className="menuAnchor"
+            className="menuAnchor button"
             href="mailto:yulia.savchuk.a@gmail.com"
           >
             Say Hello!
@@ -149,7 +149,7 @@ exports[`renders landing page 1`] = `
               Crafting Captivating User-Centric and Pixel-Perfect Designs
             </p>
             <a
-              className="button"
+              className="button "
               href="mailto:yulia.savchuk.a@gmail.com"
             >
               Say Hello!
@@ -168,15 +168,7 @@ exports[`renders landing page 1`] = `
               viewBox="0 0 451 451"
               width={451}
               xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clipRule="evenodd"
-                d="M451 225.5C451 350.04 350.04 451 225.5 451S0 350.04 0 225.5 100.96 0 225.5 0 451 100.96 451 225.5zM225.5 425C335.681 425 425 335.681 425 225.5S335.681 26 225.5 26 26 115.319 26 225.5 115.319 425 225.5 425z"
-                fill="#38ABFF"
-                fillOpacity={0.35}
-                fillRule="evenodd"
-              />
-            </svg>
+            />
           </div>
           <section
             className="statsWrapper"
@@ -257,12 +249,12 @@ exports[`renders landing page 1`] = `
           className="buttonWrapper"
         >
           <a
-            className="button"
+            className="button "
           >
             My projects
           </a>
           <a
-            className="button"
+            className="button secButton"
             download={true}
             href="./CV/CV.pdf"
           >

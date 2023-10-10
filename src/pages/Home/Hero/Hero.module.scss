@@ -5,7 +5,6 @@
     padding-top: 46px;
 
     & .background {
-        padding-top: 46px;
         padding-bottom: 425px;
     }
 
@@ -41,6 +40,7 @@
     & p {
         color: #556070;
         margin-bottom: 32px;
+        font-weight: 600;
     }
 
     & .greenEllipse {
@@ -67,7 +67,7 @@
         z-index: 1;
         border-radius: 871px;
         background: rgba(218, 77, 241, 0.4);
-        opacity: 40%;
+        //opacity: 40%;
         filter: blur(300px);
     }
 
